@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.yodiyanwar.model.Alamat" table="alamat">
+		<meta attribute="class-description">This class contains the mahasiswa's address
+			details.</meta>
+		<id name="alamatId" type="long" column="alamatId">
+			<generator class="native" />
+		</id>
+		<property name="namaJalan" column="namaJalan" type="string" length="250" />
+		<property name="kota" column="kota" type="string" length="50" />
+		<property name="provinsi" column="provinsi" type="string" length="50" />
+		<property name="kodePos" column="kodePos" type="string" length="10" />
+	</class>
+</hibernate-mapping>

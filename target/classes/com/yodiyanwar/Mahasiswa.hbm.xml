@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.yodiyanwar.model.Mahasiswa" table="mahasiswa">
+        <meta attribute="class-description">This class contains Mahasiswa details.</meta>
+        <id name="npm" type="long" column="npm">
+            <generator class="native" />
+        </id>
+        <property name="nama" type="string" not-null="true" length="100" column="nama" />
+        <many-to-one name="alamat" class="com.yodiyanwar.model.Alamat" column="alamat" not-null="true" cascade="all" unique="true" />
+    </class>
+</hibernate-mapping>
